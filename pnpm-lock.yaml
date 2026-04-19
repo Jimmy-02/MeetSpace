@@ -20,6 +20,12 @@ importers:
 
   apps/web-admin:
     dependencies:
+      '@meetspace/types':
+        specifier: workspace:^
+        version: link:../../packages/types
+      '@meetspace/validation':
+        specifier: workspace:^
+        version: link:../../packages/validation
       next:
         specifier: 16.2.4
         version: 16.2.4(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -57,6 +63,12 @@ importers:
 
   apps/web-client:
     dependencies:
+      '@meetspace/types':
+        specifier: workspace:^
+        version: link:../../packages/types
+      '@meetspace/validation':
+        specifier: workspace:^
+        version: link:../../packages/validation
       next:
         specifier: 16.2.4
         version: 16.2.4(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -132,18 +144,16 @@ importers:
 
   packages/typescript-config: {}
 
-  packages/validation:
-    dependencies:
-      zod:
-        specifier: ^4.3.6
-        version: 4.3.6
-    devDependencies:
-      typescript:
-        specifier: ^6.0.3
-        version: 6.0.3
+  packages/validation: {}
 
   services/api:
     dependencies:
+      '@meetspace/types':
+        specifier: workspace:^
+        version: link:../../packages/types
+      '@meetspace/validation':
+        specifier: workspace:^
+        version: link:../../packages/validation
       cookie-parser:
         specifier: ^1.4.7
         version: 1.4.7
